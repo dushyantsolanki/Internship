@@ -1,11 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    header .navbar {
+        padding: 0 1rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(4, 85, 58, 0.849);
+        color: white;
+        font-family: sans-serif;
+        position: relative;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    header>.navbar>.nav-content-list>nav>ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+    }
+
+    header>.navbar>.nav-content-list>nav>ul>li {
+
+        padding: 0.5rem 1rem;
+        background-color: rgba(0, 0, 0, 0.048)
+    }
+
+    #responsive-right-nav {
+        position: absolute;
+        width: 100vw;
+        display: none;
+        font-family: sans-serif;
+        color: white;
+        background-color: rgba(4, 85, 58, 0.925);
+
+
+
+    }
+
+    .res-nav>ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .res-nav>ul>li {
+        margin: 1rem 0;
+        list-style: none;
+
+    }
+
+    .btn {
+        display: none;
+    }
+
+    #closeHambarger {
+        display: none;
+    }
+
+
+    @media (max-width: 950px) {
+        .btn {
+            display: block;
+        }
+
+        header>.navbar>.nav-content-list>nav>ul {
+            display: none;
+        }
+    }
+
+    @media (min-width: 951px) {
+
+        #responsive-right-nav {
+            display: none !important;
+        }
+    }
+</style>
+
+
 <body>
-    
+    <div class="home-page">
+        <header>
+            <div class="navbar">
+
+                <div class="org-logo">
+                    <h2> BioGrove</h2>
+
+                </div>
+                <div class="nav-content-list">
+                    <nav>
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Contact Us</li>
+                            <li>Blog</li>
+                            <li>Login</li>
+
+                        </ul>
+                        <div class="btn">
+                            <i class="fa-solid fa-bars" style="font-size:25px" id="openHambarger"></i>
+                            <i class="fa-solid fa-xmark" style="font-size:25px" id="closeHambarger"> </i>
+
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+            <div id="responsive-right-nav">
+                <nav class="res-nav">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Contact Us</li>
+                        <li>Blog</li>
+                        <li>Login</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr><br><br>
+        <hr><br><br><br><br>
+        <section>
+            <article>
+                Hello from articals.
+            </article>
+        </section>
+        <footer>
+            Hello From Footer
+        </footer>
+    </div>
+
+    <script>
+        const menu = document.getElementById('openHambarger')
+        const close_mark = document.getElementById('closeHambarger')
+        const right_menu = document.getElementById('responsive-right-nav')
+
+        menu.addEventListener('click', () => {
+            right_menu.style.display = 'block'
+            menu.style.display = 'none'
+            close_mark.style.display = 'block'
+        })
+
+        close_mark.addEventListener('click', () => {
+            right_menu.style.display = 'none'
+            menu.style.display = 'block'
+            close_mark.style.display = 'none'
+        })
+
+    </script>
 </body>
+
 </html>
