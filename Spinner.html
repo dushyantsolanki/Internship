@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: antiquewhite;
+
+    }
+
+    .box {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: 5px solid transparent;
+        border-top: 5px solid blue;
+        border-right: 5px solid blue;
+        border-bottom: 5px solid blue;
+        animation: spinner 1s linear infinite;
+        border-radius: 50%;
+
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+
+        }
+
+        50% {}
+
+        100% {
+
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+
+    <div class="box">
+
+    </div>
+</body>
+
+</html>
